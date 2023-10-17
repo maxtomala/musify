@@ -1,0 +1,69 @@
+<div class="artist-box" *ngIf="artist">
+
+    <div id="artist-head-card">
+        <div class="image" style="background-color: black;">
+            <img src="{{ url + '/get-image-artist/' + artist.image }}" *ngIf="artist.image && artist.image !=='null'" />
+        </div>
+        <div class="data">
+            <h1>{{artist.name}}</h1>
+            <p class="description"> {{artist.description}}</p>
+            <a [routerLink]="['/crear-album', artist._id]" *ngIf="identity.role=='ROLE_ADMIN'" class="btn btn-default"
+                id="miBoton">
+                Añadir album
+            </a>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div id="gallery-albums" *ngIf="albums">
+        <!-- LISTAR LOs ALBUMS -->
+       
+        <ul class="album-list">
+            <li *ngFor="let album of albums" class="col-lg-4 album-item">
+               
+                <div class="album-image">
+                    <img src="{{url+'/get-image-album/'+album.image}}" />
+                </div>
+
+                <div class="album-name" style="padding-bottom: 33px;">
+                    <p>
+                        <a [routerLink]="['/album', album._id]">
+                            {{album.title}}
+                        </a>
+                    </p>
+
+                    <p>
+                        <a [routerLink]="['/artista', album.artist._id]" class="">
+                            {{album.artist.name}}
+                        </a>
+                    </p>
+
+                    <div class="buttons" *ngIf="identity.role =='ROLE_ADMIN'">
+                        <a [routerLink]="['/editar-album/',album._id]" class="btn btn-sm btn-warning">Editar</a>
+                        <span style="margin-right: 5px;"></span>
+                        <a (click)="onDeleteConfirm(album._id)" class="btn btn-sm btn-danger"
+                            style="background-color: red; color: black;">
+                            <!-- puse d emas estos argumentos (this.confirmado)¿lo borro? -->
+
+                            Borrar</a>
+                    </div>
+                </div>
+
+
+                <div class="seguro seguro-album" *ngIf="confirmado==album._id"
+                    style="margin-top: -64px;margin-left: 8px;">
+                    <a (click)="onDeleteAlbum(album._id)" class="btn btn-sm btn-danger">
+                        Eliminar
+                    </a>
+                    <span style="margin-right: 5px;"></span>
+                    <a (click)="onCancelAlbum()" class="btn btn-sm btn-primary">
+                        Cancelar
+                    </a>
+                </div>
+
+
+            </li>
+        </ul>
+    </div>
+</div>

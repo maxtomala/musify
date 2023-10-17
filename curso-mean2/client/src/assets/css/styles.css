@@ -1,0 +1,291 @@
+
+/*GLOBAL*/
+html, body
+    {
+    margin:0px;
+    height: 100%;
+    background:#eee;
+    }
+
+.actived{
+    border-bottom:4px solid #84bd00;
+    padding-bottom: 4px;
+}
+
+.central{
+    /* height: 100%;
+    /* overflow-y: auto; */
+    /* overflow-x: auto;
+    flex-wrap: nowrap; 
+   flex-direction: column;  */
+
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+
+
+}
+
+.seguro{ 
+    margin-top:-50px;
+    background: #222326;
+    position: absolute;
+    height:40px;
+
+    margin:0px;
+    padding: 0px;
+    margin-top:-32px;
+    list-style: none;
+    width:150px;
+
+}
+.seguro-album{ 
+    margin-top: -41px;
+    margin-left:10px;
+    margin-top: -20px;
+
+}
+
+.seguro-song{ 
+    background: white;
+    right: 10px;
+    margin-top: -36px;
+    margin-top:-44px;
+    display: flex;
+}
+
+/*BARRA LATERAL*/
+.head-title
+    {
+        font-size:20px;
+        font-weight:bold;
+        text-transform:uppercase;
+        margin-bottom:25px;
+        display:block;
+    }
+.navigation
+    {
+    text-align:center ;
+    color:white;
+    background: #1c1c1f;
+    height: 100%;
+    }
+        .col-lg-2{
+            float: left;
+            width: 8%; /* Ajusta el ancho según tus necesidades */
+        } 
+        .col-lg-10 {
+            float: left;
+            width: 92; /* Ajusta el ancho según tus necesidades */
+        }
+.navigation a
+    {
+    color:#ddd;
+    margin-top:20px;
+    margin-bottom:20px ;
+    display:block;
+    text-decoration: none;
+    }
+.navigation a :hover
+    {
+        color:white;   
+    }
+
+
+.icon-large {
+        width: 100px;
+        height: 50px;   
+      }
+
+    
+#user_logged{
+    text-decoration: center;
+    background: #1c1c1f;
+    position: absolute;
+    bottom: 0px;
+    border-top:1px solid#444;
+}
+#user_logged .user-image{
+    background: #eeee;
+    border-radius:100px;
+    height: 57px;
+    width: 57px;
+    margin: 0px auto;
+    margin-top:15px;
+    overflow:hidden;
+}
+
+#user_logged .user-image img{
+    width: 57px;
+}
+
+.btn-logout{
+    cursor:pointer;
+}
+
+.icon-purple {
+    color: red;
+  }
+/*DETALLE DE ARTISTA Y ALBUMS*/
+#artist-head-card .image,
+#album-head-card .image{
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+}
+#artist-head-card .image img,
+#album-head-card .image img{
+    width: 170px;
+}
+  /*ARTISTA Y ALBUMS*/
+.artist_image_for_edit img,
+.album_image_for_edit img{
+    width:150px;   
+  }
+
+.artist-list,
+.album-list{
+    margin:0px;
+    padding: 0px;
+    margin-top:30px;
+    list-style: none;
+    min-height: 400px;
+    display: flex;
+ 
+}
+.artist-item{
+    width:20%;
+    margin: 0px;
+    padding: 0px;
+    height: 317px;
+    border:1px solid #444;
+    margin-left:5px;
+    margin-top:20px;      /*el comenta esta linea*/
+    margin-right: 5px;
+    display: inline-block;
+    background: #222326;
+    
+}
+.album-item{
+    width:23%;
+    margin: 0px;
+    padding: 0px;
+    height: 317px;
+    border:1px solid #444;
+    margin-left:20px;
+    margin-top:20px;
+    display: inline-block;
+    background: #222326;
+}
+
+.artist-item .artist-image,
+.album-item .album-image{
+    height: 245px;
+    width: 100%;
+    overflow: hidden;
+    background: black;
+}
+/*ALBUMS*/
+.album-item{
+    height: 357px;
+}
+
+.artist-item .artist-image img{
+    height: 100%;
+}
+
+
+/* .album-item .album-name{
+    color:black;
+    padding: 10px;
+    background: #222326;
+} */
+
+.artist-item .artist-name,
+.album-item .album-name{
+    color:white;
+    padding: 8px;
+    background: #222326;
+
+}
+ .album-name{
+    padding-bottom: 60px;
+
+}
+
+
+
+.artist-item .artist-name a,
+.album-item .album-name a{
+    color:white;
+}
+
+.album-item .album-image img{
+    width: 100%;
+}
+
+
+/* boton  artist list y detail*/
+#miBoton {
+    border: 1px solid #000; /* Establece un borde sólido de 2 píxeles de ancho en color negro (#000) */
+    padding: 5px 10px; /* Agrega relleno para dar espacio alrededor del texto */
+    background: white;
+}
+
+/*canciones*/
+#songs-list{
+    margin:0px;
+    padding: 0px;   
+}
+
+.song-item{
+    list-style:none;
+    border-bottom:1px solid #ccc;
+    padding-top: 3px ;
+}
+.song-item .title{
+    padding:12px;
+}
+
+.song-item .buttons{
+    float:right;
+}
+.song-item .btn-success{
+    margin-right: 10px;
+}
+/*player*/
+.player{
+    background: #1c1c1f;
+    position:fixed;
+    width: 90.5%;
+    bottom: 0;
+    margin-left:-12px;
+    border-left: 1px solid #444;
+    color:gray;
+}
+
+.player .album-image{
+    float: left;
+    width:138px;
+    height: 105px;
+    margin-left:-1px;
+    margin-top:7px;
+    overflow:hiddem;
+}
+.player .album-image img{
+    height: 100%;
+}
+.player .audio-file{
+    width: 85%;
+    height: 40%;
+    margin-top: 7px;
+    margin-left: 10px;
+    float:left;
+}
+.player audio{
+    width: 100%;
+    height:40px;
+}

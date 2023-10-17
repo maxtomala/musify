@@ -1,0 +1,171 @@
+<div class="row" >
+  <div *ngIf="identity" class="navigation col-lg-2" style="float: left; width: 16.66667%;">
+    <h1 class="head-title">
+      <a [routerLink]="['/']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-music-note-list icon-large" viewBox="0 0 16 16">
+          <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+          <path fill-rule="evenodd" d="M12 3v10h-1V3h1z" />
+          <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z" />
+          <path fill-rule="evenodd"
+            d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <p></p>
+        {{ title }}
+      </a>
+    </h1>
+
+    <nav id="navigation col-lg-2">
+
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search icon-large" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+        <p></p>
+        Buscar
+      </a>
+
+      <a [routerLink]="['/artistas',1]" [routerLinkActive]="['actived']">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill icon-large"
+          viewBox="0 0 16 16">
+          <path
+            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+        </svg>
+        <p></p>
+        Artistas
+      </a>
+
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-journal-bookmark-fill icon-large" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z" />
+          <path
+            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+          <path
+            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+        </svg>
+        <p></p>
+        Albums
+      </a>
+
+    </nav>
+
+    <nav id="user_logged ">
+      <div class="user-image">
+        <img src="{{this.url }} " style="width:100px" />
+      </div>
+
+      <span id="identity_name">
+        {{identity.name}}
+      </span>
+      <a [routerLink]="['/mis-datos']" [routerLinkActive]="['actived']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-person-gear icon-large" viewBox="0 0 16 16">
+          <path
+            d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+        </svg>
+        <p></p>
+        Mis datos
+      </a>
+      <a (click)="logout()" class="btn-logout">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-box-arrow-right icon-large" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+          <path fill-rule="evenodd"
+            d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+        </svg>
+        <p></p>
+        Salir
+      </a>
+    </nav>
+  </div>
+
+  <div class="container" class="col-lg-12" style="float: left; width: 83.33333%;">
+    <div *ngIf="identity" class="clearfix">
+
+      <div [class.hidden]="!identity" class=" central col-lg-12">
+        <router-outlet></router-outlet>
+
+        <div class="clearfix"></div>
+        <player class="player" *ngIf="identity"></player>
+      </div>
+    </div>
+
+    <div class="col-lg-11" *ngIf="!identity" style=" display: flex;">
+      <div class="col-lg-6" style="float: left; width: 50%; margin-top:100px; margin-left:100px;">
+        <!-- style="float: left; width: 50%; margin-top:100px; margin-left:10px;" -->
+        <h1>Identificate </h1>
+        <div *ngIf="errorMessage">
+          <div class="alert alert-info">
+            <strong></strong> {{errorMessage}}
+          </div>
+        </div>
+
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7">
+          <p>
+            <label>Correo electronico: </label>
+            <input type="email" #email="ngModel" name="email" [(ngModel)]="user.email" class="form-control" required />
+            <span *ngIf="!email.valid && email.touched">
+              El email es obligatorio
+            </span>
+          </p>
+          <p>
+            <label> Contraseña: </label>
+            <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control"
+              required />
+
+          </p>
+          <input type="submit" value="Entrar" class="btn btn-primary">
+
+        </form>
+      </div>
+
+      <div class="col-lg-6" style="float: left; width: 50%; margin-top:100px;">
+        <h1>Registrate</h1>
+        <div *ngIf="alertRegister">
+          <div class="alert alert-info">
+            <strong>{{alertRegister}}</strong> 
+          </div>
+        </div>
+        <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" class="col col-md-10">
+          <p>
+            <label> Nombre: </label>
+            <input type="text" #name="ngModel" name="name" [(ngModel)]="user_register.name" class="form-control"
+              required />
+            <span *ngIf="!name.valid && name.touched">
+              El nombre es obligatorio
+            </span>
+          </p>
+
+          <p>
+            <label> Apellidos: </label>
+            <input type="text" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname"
+              class="form-control" required />
+            <span *ngIf="!surname.valid && surname.touched">
+              Los Apellidos son obligatorios
+            </span>
+          </p>
+          <p>
+            <label>Correo electronico: </label>
+            <input type="email" #email="ngModel" name="email" [(ngModel)]="user_register.email" class="form-control"
+              required />
+            <span *ngIf="!email.valid && email.touched">
+              El email es obligatorio
+            </span>
+          </p>
+          <p>
+            <label> Contraseña: </label>
+            <input type="password" #password="ngModel" name="password" [(ngModel)]="user_register.password"
+              class="form-control" autocomplete="off" required />
+            <span *ngIf="!password.valid && password.touched">
+              La contraseña es obligatoria
+            </span>
+            <br> 
+            <input type="submit" value="Registrarse" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
