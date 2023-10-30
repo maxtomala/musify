@@ -19,9 +19,9 @@ o	http con node.js utilizando express.
 12.	Crear menú de navegación.
 13.	Crear Componente para cada sección 
 14.	Subir el avatar del usuario
-![Screenshot_11](https://github.com/maxtomala/musify/assets/114834764/dd5c52d0-a015-4bf6-af74-5c7668d83688)
-![Screenshot_5](https://github.com/maxtomala/musify/assets/114834764/56811257-21c7-45b6-82ea-ca10b4312caf)
-![Screenshot_4](https://github.com/maxtomala/musify/assets/114834764/60723c01-fd7a-45c7-bd7f-f1142bc4fd41)
-![Screenshot_3](https://github.com/maxtomala/musify/assets/114834764/00f17e32-f634-4280-bb35-cfe8812d9f99)
-![Screenshot_2](https://github.com/maxtomala/musify/assets/114834764/a590a5e3-ebec-4910-95ca-8c02ba6d546b)
-![Screenshot_1](https://github.com/maxtomala/musify/assets/114834764/657231d3-af04-40cc-8e1f-feec09e2bab3)
+https://github.com/maxtomala/musify/blob/main/Screenshot_1.jpg
+https://github.com/maxtomala/musify/blob/main/Screenshot_11.jpg
+https://github.com/maxtomala/musify/blob/main/Screenshot_2.jpg
+https://github.com/maxtomala/musify/blob/main/Screenshot_3.jpg
+https://github.com/maxtomala/musify/blob/main/Screenshot_4.jpg
+https://github.com/maxtomala/musify/blob/main/Screenshot_5.jpg
